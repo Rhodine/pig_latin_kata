@@ -10,9 +10,21 @@
 # Assume the words are lowercase.
 # Assume your user is a developer — e.g. you don't need to write a user interface.
 
+
+word = " "
+first_letter = " "
 def pig_latin(word)
+  if word[0] == "a" || word[0] == "e" || word[0] == "i" || word[0] == "o" || word[0] == "u"
+     word + "way"
+
+  else
+    first_letter = word[0]
+    word.slice!(0)
+    word + first_letter + "ay"
+  end
 
 end
+pig_latin(word)
 
 ## Tests:
 
